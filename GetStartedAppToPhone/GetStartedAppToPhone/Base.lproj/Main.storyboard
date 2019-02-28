@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetStartedAppToPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FQX-bh-0Dg">
+                                <rect key="frame" x="67.5" y="36" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="c2J-GO-ZdF"/>
+                                    <constraint firstAttribute="height" constant="60" id="tmy-i5-4kg"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="c0d-ug-eqr">
+                                <rect key="frame" x="177.5" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXd-2v-cI4">
+                                <rect key="frame" x="87.5" y="597" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.2091954714" green="0.64987062039999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GRb-CP-eL7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Nhb-hP-jia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="callNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DtU-Hc-zZf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-E9-osX">
+                                <rect key="frame" x="16" y="329" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.22352941179999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jIr-E9-osX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4S9-2a-GCD"/>
+                            <constraint firstItem="c0d-ug-eqr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4wB-gt-Mtp"/>
+                            <constraint firstItem="jIr-E9-osX" firstAttribute="top" secondItem="c0d-ug-eqr" secondAttribute="bottom" constant="20" id="6pe-W1-ebC"/>
+                            <constraint firstItem="VXd-2v-cI4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Eaj-Mr-bv5"/>
+                            <constraint firstItem="FQX-bh-0Dg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="a3W-Rw-7cK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jIr-E9-osX" secondAttribute="trailing" constant="16" id="p7C-vY-qfy"/>
+                            <constraint firstItem="jIr-E9-osX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="qGx-rQ-WUX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VXd-2v-cI4" secondAttribute="bottom" constant="20" id="sX3-mz-T1y"/>
+                            <constraint firstItem="FQX-bh-0Dg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w6D-9L-gqL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="c0d-ug-eqr" id="GTg-xP-jLO"/>
+                        <outlet property="callButton" destination="VXd-2v-cI4" id="bA9-Cl-wzL"/>
+                        <outlet property="statusLabel" destination="jIr-E9-osX" id="HT1-vR-8Lb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="659" height="221"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_GetStartedAppToPhone {
+  umbrella header "Pods-GetStartedAppToPhone-umbrella.h"
+
+  export *
+  module * { export * }
+}
