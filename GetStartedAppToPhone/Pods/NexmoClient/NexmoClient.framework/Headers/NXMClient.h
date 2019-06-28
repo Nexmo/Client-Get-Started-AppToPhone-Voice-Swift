@@ -22,12 +22,12 @@ Return the connection status.
 /*!
  Return the current user
  */
-@property (nonatomic, strong, readonly, nullable, getter=getUser) NXMUser *user;
+@property (nonatomic, readonly, nullable, getter=getUser) NXMUser *user;
 
 /*!
  Return the current authentication token
  */
-@property (nonatomic, strong, readonly, nullable, getter=getToken) NSString *token;
+@property (nonatomic, readonly, nullable, getter=getToken) NSString *token;
 
 /**
  init nxmClient with authentication token
@@ -90,12 +90,12 @@ Logout
 // Create a new call to users
 //
 // @param callees         user ids/name or pstn number to call
-// @param callType        type of the call (InApp/SERVER)
+// @param callHandler        type of the call (InApp/SERVER)
 // @param delegate        call delegate
 // @param completion      completion block
 // */
 - (void)call:(nonnull NSArray<NSString *>*)callees
-    callType:(NXMCallType)callType
+    callHandler:(NXMCallHandler)callHandler
     delegate:(nullable id<NXMCallDelegate>)delegate
   completion:(void(^_Nullable)(NSError * _Nullable error, NXMCall * _Nullable call))completion;
 

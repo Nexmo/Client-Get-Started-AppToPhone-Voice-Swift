@@ -34,13 +34,6 @@ typedef NS_ENUM(NSInteger, NXMMediaActionType) {
     //TODO:earmuffed?held?
 };
 
-typedef NS_ENUM(NSInteger, NXMMediaStreamType) {
-    NXMMediaStreamTypeNone,
-    NXMMediaStreamTypeSend,
-    NXMMediaStreamTypeReceive,
-    NXMMediaStreamTypeSendReceive
-};
-
 typedef NS_ENUM(NSInteger, NXMEventType) {
     NXMEventTypeGeneral,
     NXMEventTypeText,
@@ -50,14 +43,8 @@ typedef NS_ENUM(NSInteger, NXMEventType) {
     NXMEventTypeMedia,
     NXMEventTypeMediaAction,
     NXMEventTypeMember,
-    NXMEventTypeSip
-};
-
-typedef NS_ENUM(NSInteger, NXMSipEventType){
-    NXMSipEventRinging,
-    NXMSipEventAnswered,
-    NXMSipEventStatus,
-    NXMSipEventHangup
+    NXMEventTypeSip,
+    NXMEventDTMF
 };
 
 typedef NS_ENUM(NSInteger, NXMMessageStatusType) {
@@ -77,4 +64,28 @@ typedef NS_ENUM(NSInteger, NXMMemberState) {
     NXMMemberStateJoined,
     NXMMemberStateLeft
 };
+
+typedef NS_ENUM(NSInteger, NXMDirectionType){
+    NXMDirectionTypeApp,
+    NXMDirectionTypePhone,
+    NXMDirectionTypeSIP,
+    NXMDirectionTypeWebsocket,
+    NXMDirectionTypeVBC,
+    NXMDirectionTypeUnknown
+};
+
+typedef NS_ENUM(NSInteger, NXMSipEventType){
+    NXMSipEventRinging,
+    NXMSipEventAnswered,
+    NXMSipEventStatus,
+    NXMSipEventHangup
+};
+
+typedef NS_ENUM(NSInteger, NXMMediaStreamType) {
+    NXMMediaStreamTypeNone,
+    NXMMediaStreamTypeSend,
+    NXMMediaStreamTypeReceive,
+    NXMMediaStreamTypeSendReceive
+};
+
 

@@ -9,22 +9,19 @@
 
 #import "NXMEnums.h"
 #import "NXMUser.h"
-
-@class NXMMemberEvent;
+#import "NXMMediaSettings.h"
+#import "NXMChannel.h"
 
 @interface NXMMember : NSObject
-@property (nonatomic, strong) NSString *conversationId;
-@property (nonatomic, strong) NSString *memberId;
-@property (nonatomic, strong) NSString *joinDate;
-@property (nonatomic, strong) NSString *inviteDate;
-@property (nonatomic, strong) NSString *leftDate;
-@property (nonatomic, strong) NXMUser *user;
-@property (nonatomic) NXMMemberState state;
 
-- (instancetype)initWithMemberId:(NSString *)memberId
-                  conversationId:(NSString *)conversationId
-                          user:(NXMUser *)user
-                           state:(NXMMemberState)state;
+@property (nonatomic, copy, nonnull) NSString *conversationId;
+@property (nonatomic, copy, nonnull) NSString *memberId;
+@property (nonatomic, readonly, nonnull) NXMUser *user;
+@property (nonatomic, copy, nonnull) NSString *joinDate;
+@property (nonatomic, copy, nullable) NSString *inviteDate;
+@property (nonatomic, copy, nullable) NSString *leftDate;
+@property (nonatomic, readonly) NXMMemberState state;
+@property (nonatomic, readonly, nullable) NXMMediaSettings *media;
+@property (nonatomic, readonly, nullable) NXMChannel *channel;
 
--(instancetype)initWithMemberEvent:(NXMMemberEvent *)memberEvent;
 @end

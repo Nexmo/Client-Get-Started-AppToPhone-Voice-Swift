@@ -71,11 +71,19 @@ extension ViewController {
                 return .callEnded
             }
         }
-        switch call.status  {
-        case .disconnected:
-            return .callEnded
-        case .connected:
+        switch call.myCallMember.status  {
+        case .dialling:
+            fallthrough
+        case .calling:
+            fallthrough
+        case .started:
+            fallthrough
+        case .answered:
             return .inCall
+        case .completed:
+            fallthrough
+        case .cancelled:
+            return .callEnded
         }
     }
     

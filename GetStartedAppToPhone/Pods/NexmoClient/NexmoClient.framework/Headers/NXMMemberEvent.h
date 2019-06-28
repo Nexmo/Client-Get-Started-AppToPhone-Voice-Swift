@@ -8,22 +8,15 @@
 #import "NXMEvent.h"
 #import "NXMUser.h"
 #import "NXMMediaSettings.h"
-
-typedef NS_ENUM(NSInteger, NXMChannelType){
-    NXMChannelTypeApp,
-    NXMChannelTypePhone,
-    NXMChannelTypeUnknown
-};
+#import "NXMChannel.h"
 
 @interface NXMMemberEvent : NXMEvent
 
-@property (nonatomic, strong, nonnull) NSString *memberId;
+@property (nonatomic, copy, nonnull) NSString *memberId;
 @property (nonatomic) NXMMemberState state;
-@property (nonatomic, strong, nonnull) NXMUser *user;
-@property (nonatomic, strong, nonnull) NSString *phoneNumber;
-@property (nonatomic, strong, nullable) NXMMediaSettings *media;
-@property (nonatomic) NXMChannelType channelType;
-@property (nonatomic, strong, nullable) NSString *channelData;
-@property (nonatomic, strong, nullable) NSString *knockingId;
+@property (nonatomic, readonly, nonnull) NXMUser *user;
+@property (nonatomic, readonly, nullable) NXMMediaSettings *media;
+@property (nonatomic, readonly, nullable) NXMChannel *channel;
+@property (nonatomic, copy, nullable) NSString *knockingId;
 
 @end

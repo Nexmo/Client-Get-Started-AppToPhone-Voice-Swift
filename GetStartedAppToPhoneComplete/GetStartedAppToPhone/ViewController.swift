@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     private func startCall() {
         callStatus = .initiated
-        client?.call(["CALLEE_PHONE_NUMBER"], callType: .server, delegate: self) { [weak self] (error, call) in
+        client?.call(["CALLEE_PHONE_NUMBER"], callHandler: .server, delegate: self) { [weak self] (error, call) in
             guard let self = self else { return }
             // Handle create call failure
             guard let call = call else {

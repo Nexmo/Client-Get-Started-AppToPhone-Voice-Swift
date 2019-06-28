@@ -9,12 +9,9 @@
 
 @interface NXMUser : NSObject
 
-@property NSString * _Nonnull userId;
-@property NSString * _Nonnull name;
-@property NSString * _Nullable displayName;
-
-- (instancetype _Nullable)initWithId:(NSString * _Nonnull)uuid name:(NSString * _Nonnull)name;
-- (instancetype _Nullable)initWithId:(NSString * _Nonnull)uuid name:(NSString * _Nonnull)name displayName:(NSString * _Nullable)displayName;
+@property (nonatomic, copy, nonnull) NSString *userId;
+@property (nonatomic, copy, nonnull) NSString *name;
+@property (nonatomic, copy, nonnull) NSString *displayName;
 
 @end
 

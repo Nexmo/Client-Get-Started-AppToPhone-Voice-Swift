@@ -15,3 +15,4 @@
 #import "NXMMediaActionEvent.h"
 #import "NXMMediaSuspendEvent.h"
 #import "NXMRtcAnswerEvent.h"
+#import "NXMDTMFEvent.h"
